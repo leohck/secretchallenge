@@ -7,7 +7,7 @@ class TestPlayer(TestCase):
     def setUp(self):
         self.players = {
             "impulsivo": Player(1, 1),
-            "exigente":  Player(2, 2),
+            "exigente": Player(2, 2),
             "cauteloso": Player(3, 3),
             "aleatorio": Player(4, 4)
         }
@@ -74,6 +74,18 @@ class TestPlayer(TestCase):
         #  ALEATORIO
         #  Teste unitário não implementado
         #  TODO: Implementar teste unitário do Player (comportamento aleatorio)
+
+    def test_check_if_corret_rent_price_as_payed(self):
+        """
+        Testa se o saldo restante apos o pagamento do aluguel esta correto.
+        :return: None
+        """
+        actual_balance = self.players["impulsivo"].balance
+        self.players["impulsivo"].pay_rent(self.estate)
+        self.assertEqual(
+            actual_balance - self.estate.rent_price, self.players["impulsivo"].balance,
+            "The Player balance  after a rent payment must be the result of (Player BALANCE - Estate RENT PRICE)"
+        )
 
 
 if __name__ == "__main__":

@@ -99,13 +99,13 @@ class Player:
     @staticmethod
     def set_behavior(behavior):
         """
-        Recebe o numero do tipo de comportamento do jogaodor e retorna sua caracteristica.
+        Recebe o numero do tipo de comportamento do jogador e retorna sua caracteristica.
             - 1 Impulsivo
             - 2 Exigente
             - 3 Cauteloso
             - 4 Aleatorio
         :param behavior: Numero do Comportamento do jogador
-        :return: Tupla contendo o numero do comportamento e sua caracteristica.
+        :return: Tupla contendo o id do comportamento e sua caracteristica.
         """
         behaviors = [
             (1, "Impulsivo"),
@@ -117,7 +117,7 @@ class Player:
 
     def can_buy_estate(self, estate):
         """
-        Recebe uma instancia da propriedade e analisa se o jogador pode compra-lá, baseado nas seguintes regras:
+        Recebe uma instancia da propriedade e analisa se o jogador podera compra-lá, baseado nas seguintes regras:
             - O jogador IMPULSIVO compra qualquer propriedade sobre a qual ele parar.
             - O jogador EXIGENTE compra qualquer propriedade, desde que o valor do aluguel dela seja maior do que 50.
             - O jogador CAUTELOSO compra qualquer propriedade desde que ele tenha uma reserva de 80 saldo sobrando depois de realizada a compra.
@@ -152,7 +152,6 @@ class Player:
         """
         Recebe uma instancia da propriedade e realiza a compra da mesma.
         após isso insere na lista de propriedades que o jogador pertence
-        e seta o atributo owner_id da Propriedade com o seu própio ID
 
         :param estate: Instancia da classe Estate (Propriedade)
         :return: None
@@ -160,4 +159,8 @@ class Player:
         assert isinstance(estate, Estate), "param estate is not a valid Estate, e.g it isn't a instance of Estate"
         self.balance -= estate.price
         self.estates.append(estate)
-        estate.owner_id = self.id_
+
+    def pay_rent(self, estate):
+        assert isinstance(estate, Estate), "param estate is not a valid Estate, e.g it isn't a instance of Estate"
+        self.balance -= estate.rent_price
+        self.balance += 1
