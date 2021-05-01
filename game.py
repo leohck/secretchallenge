@@ -376,7 +376,7 @@ class Game:
         winner = None
         players = self.__get_random_players_sequence()
         # print("====== INICIO DO JOGO ======")
-        while self.__round <= self.MAX_ROUNDS:
+        while self.__round < self.MAX_ROUNDS:
             # print("====== RODADA: %i =======" % self.round)
             for player in players.values():
                 #  1 - INICIAR JOGADA
@@ -431,8 +431,7 @@ class Game:
             if winner:
                 break
 
-            if self.__round < self.MAX_ROUNDS:
-                self.__round += 1
+            self.__round += 1
 
         # print("====== FIM DO JOGO ======")
         winner = self.__get_winner_player(players) if winner is None else winner
