@@ -24,7 +24,7 @@ Requisitos:
 
 import unittest
 from unittest import TestCase
-from main import Player, Estate, Game
+from game import Player, Estate, Game
 
 
 class TestPlayer(TestCase):
