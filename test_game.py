@@ -5,6 +5,7 @@ Created by: Leonardo Black
 Teste Unitário Orientado a Requisito.
 
 Estes testes garantem que as implementações da aplicação estejam em conformidade com os Requisitos passados.
+E que futuras alterações e features não quebrem a aplicação.
 
 Requisitos:
     - Jogadores = 4
@@ -24,7 +25,9 @@ Requisitos:
 
 import unittest
 from unittest import TestCase
-from game import Player, Estate, Game
+from game.estate import Estate
+from game.player import Player, BEHAVIORS
+from game.match import Match
 
 
 class TestPlayer(TestCase):
@@ -81,10 +84,10 @@ class TestPlayer(TestCase):
         self.assertEqual(2, self.players["exigente"].behavior[0])
         self.assertEqual(3, self.players["cauteloso"].behavior[0])
         self.assertEqual(4, self.players["aleatorio"].behavior[0])
-        self.assertEqual('impulsivo', self.players["impulsivo"].behavior[1])
-        self.assertEqual('exigente', self.players["exigente"].behavior[1])
-        self.assertEqual('cauteloso', self.players["cauteloso"].behavior[1])
-        self.assertEqual('aleatorio', self.players["aleatorio"].behavior[1])
+        self.assertEqual(BEHAVIORS[1][1], self.players["impulsivo"].behavior[1])
+        self.assertEqual(BEHAVIORS[2][1], self.players["exigente"].behavior[1])
+        self.assertEqual(BEHAVIORS[3][1], self.players["cauteloso"].behavior[1])
+        self.assertEqual(BEHAVIORS[4][1], self.players["aleatorio"].behavior[1])
 
     def test_behavior_implementation(self):
         """
@@ -192,13 +195,13 @@ class TestEstate(TestCase):
         self.assertTrue(self.estate.rent_price, "The Estate must have an Rent Price greater than zero")
 
 
-class TestGame(TestCase):
+class TestMatch(TestCase):
     """
     Testes unitários da classe Game (Jogo)
     """
 
     def setUp(self):
-        self.game = Game(1)
+        self.game = Match(1)
 
     def test_check_number_of_players_in_game(self):
         """
