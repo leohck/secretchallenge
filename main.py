@@ -413,11 +413,12 @@ class Game:
                 k = list(players)
                 winner = players[k[0]]
 
-            self.round += 1
             print("====== FIM RODADA ======")
 
             if winner:
                 break
+
+            self.round += 1
 
         print("====== FIM DO JOGO ======")
         winner = self.__get_winner_player(players) if winner is None else winner
