@@ -225,7 +225,6 @@ class Game:
         self.estates = self.__generate_estates()
         self.players = self.__generate_players()
         self.__analytics = {
-            "game": self.__id_,
             "rounds": self.__round,
             "winner": ""
         }
@@ -432,7 +431,8 @@ class Game:
             if winner:
                 break
 
-            self.__round += 1
+            if self.__round < self.MAX_ROUNDS:
+                self.__round += 1
 
         # print("====== FIM DO JOGO ======")
         winner = self.__get_winner_player(players) if winner is None else winner
