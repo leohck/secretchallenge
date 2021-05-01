@@ -367,8 +367,8 @@ class Game:
                 winner = player
             elif player.balance == winner.balance:
                 highest_order = min(
-                    current_player_sequence.index(player.__id_),
-                    current_player_sequence.index(winner.__id_)
+                    current_player_sequence.index(player.id_),
+                    current_player_sequence.index(winner.id_)
                 )
                 winner = players[current_player_sequence[highest_order]]
         return winner
