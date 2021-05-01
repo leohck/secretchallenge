@@ -221,12 +221,12 @@ class Game:
 
     def __init__(self, id_):
         self.__id_ = id_
-        self.round = 1
+        self.__round = 1
         self.estates = self.__generate_estates()
         self.players = self.__generate_players()
         self.__analytics = {
             "game": self.__id_,
-            "rounds": self.round,
+            "rounds": self.__round,
             "winner": ""
         }
 
@@ -235,11 +235,15 @@ class Game:
         return self.__id_
 
     @property
+    def round(self):
+        return self.__round
+
+    @property
     def analytics(self):
         return self.__analytics
 
     def __str__(self):
-        return f'ID: {self.__id_} | ROUND: {self.round}'
+        return f'ID: {self.__id_} | ROUND: {self.__round}'
 
     def __repr__(self):
         return f'Game ({self.__id_})'
@@ -373,7 +377,7 @@ class Game:
         winner = None
         players = self.__get_random_players_sequence()
         # print("====== INICIO DO JOGO ======")
-        while self.round <= self.MAX_ROUNDS:
+        while self.__round <= self.MAX_ROUNDS:
             # print("====== RODADA: %i =======" % self.round)
             for player in players.values():
                 #  1 - INICIAR JOGADA
@@ -428,12 +432,12 @@ class Game:
             if winner:
                 break
 
-            self.round += 1
+            self.__round += 1
 
         # print("====== FIM DO JOGO ======")
         winner = self.__get_winner_player(players) if winner is None else winner
         # print(f'JOGADOR: {winner} GANHOU!')
-        self.__analytics["rounds"] = self.round
+        self.__analytics["rounds"] = self.__round
         self.__analytics["winner"] = winner
 
         return self.__analytics
