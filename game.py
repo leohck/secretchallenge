@@ -114,19 +114,19 @@ class Player:
     def __new_behavior(behavior):
         """
         Recebe o numero do tipo de comportamento do jogador e retorna sua caracteristica.
-            - 1 Impulsivo
-            - 2 Exigente
-            - 3 Cauteloso
-            - 4 Aleatorio
+            - 1 impulsivo
+            - 2 exigente
+            - 3 cauteloso
+            - 4 aleatorio
 
         :param behavior: Numero do Comportamento do jogador
         :return: Tupla contendo o id do comportamento e sua caracteristica.
         """
         behaviors = {
-            1: (1, "Impulsivo"),
-            2: (2, "Exigente"),
-            3: (3, "Cauteloso"),
-            4: (4, "Aleatorio")
+            1: (1, "impulsivo"),
+            2: (2, "exigente"),
+            3: (3, "cauteloso"),
+            4: (4, "aleatorio")
         }
         return behaviors[behavior]
 
@@ -438,6 +438,6 @@ class Game:
         winner = self.__get_winner_player(players) if winner is None else winner
         # print(f'JOGADOR: {winner} GANHOU!')
         self.__analytics["rounds"] = self.__round
-        self.__analytics["winner"] = winner
+        self.__analytics["winner"] = winner.behavior[1]
 
         return self.__analytics

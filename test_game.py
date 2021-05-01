@@ -81,10 +81,10 @@ class TestPlayer(TestCase):
         self.assertEqual(2, self.players["exigente"].behavior[0])
         self.assertEqual(3, self.players["cauteloso"].behavior[0])
         self.assertEqual(4, self.players["aleatorio"].behavior[0])
-        self.assertEqual('Impulsivo', self.players["impulsivo"].behavior[1])
-        self.assertEqual('Exigente', self.players["exigente"].behavior[1])
-        self.assertEqual('Cauteloso', self.players["cauteloso"].behavior[1])
-        self.assertEqual('Aleatorio', self.players["aleatorio"].behavior[1])
+        self.assertEqual('impulsivo', self.players["impulsivo"].behavior[1])
+        self.assertEqual('exigente', self.players["exigente"].behavior[1])
+        self.assertEqual('cauteloso', self.players["cauteloso"].behavior[1])
+        self.assertEqual('aleatorio', self.players["aleatorio"].behavior[1])
 
     def test_behavior_implementation(self):
         """
