@@ -11,7 +11,7 @@ Requisitos:
     - Jogadores = 4
     - Propriedades = 20
     - N° maximo de rodadas = 1000
-    - Beneficio por dar uma volta no tabuleiro = 100
+    - Beneficio por jogador dar uma volta no tabuleiro = 100
     - Cada propriedade tem um custo de venda, um valor de aluguel, um proprietário caso já estejam compradas
     - Saldo incial dos jogadores = 300
     - O jogador impulsivo compra qualquer propriedade sobre a qual ele parar.

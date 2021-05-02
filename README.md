@@ -3,18 +3,18 @@
 
 Jogo estilo Banco Imobiliário
 
-Composto por:
+Requisitos:
 
-    - 4 jogadores
-    - 20 propriedades
-    - 1000 n° maximo de rodadas
-Regras:
-
-    - Se saldo negativo o jogador é eliminado e caso tenha propriedades as mesmas podem ser compradas.
-    - Termina quando restar somente um jogador com saldo positivo, a qualquer momento da partida, sendo ele o Vencedor
-    - Se o jogo chegar a 1000 rodadas Vence o jogador com mais saldo.
-    - Ao cair em uma propriedade sem proprietário, o jogador pode escolher entre comprar ou não a
-        propriedade. Esse é a única forma pela qual uma propriedade pode ser comprada.
-    - Ao cair em uma propriedade que tem proprietário, ele deve pagar ao proprietário o valor do aluguel da
-        propriedade.
-    - Ao completar uma volta no tabuleiro, o jogador ganha 100 de saldo
+    - Jogadores = 4
+    - Propriedades = 20
+    - N° maximo de rodadas = 1000
+    - Beneficio por jogador dar uma volta no tabuleiro = 100
+    - Cada propriedade tem um custo de venda, um valor de aluguel, um proprietário caso já estejam compradas
+    - Saldo incial dos jogadores = 300
+    - O jogador impulsivo compra qualquer propriedade sobre a qual ele parar.
+    - O jogador exigente compra qualquer propriedade, desde que o valor do aluguel dela seja maior do que 50.
+    - O jogador cauteloso compra qualquer propriedade desde que ele tenha uma reserva de 80 saldo sobrando depois de realizada a compra.
+    - O jogador aleatório compra a propriedade que ele parar em cima com probabilidade de 50
+    - O Jogador só pode comprar propriedades caso ela não tenha dono e o jogador tenha o dinheiro.
+    - Ao comprar uma propriedade, o jogador perde o dinheiro e ganha a posse da propriedade.
+    - Ao cair em uma propriedade que tem proprietário, o jogador deve pagar ao proprietário o valor do aluguel da propriedade.
