@@ -17,13 +17,6 @@ from game.controller import Controller
 if __name__ == '__main__':
     """
     Executa as 300 partidas e imprime no console os dados referentes às execuções.
-    Observação é possível encadear execuções de partidas e analisar tudo no final,
-    Exemplo:
-    gc = Controller()
-    gc.run_matches(100)
-    gc.run_matches(100)
-    gc.run_matches(100)
-    analysis = gc.analyze_date()
     """
     gc = Controller()
     gc.run_matches(300)
