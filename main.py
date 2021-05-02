@@ -21,7 +21,7 @@ if __name__ == '__main__':
     gc = Controller()
     gc.run_matches(300)
     analysis = gc.analyze_data()
-    print(f'Numero de partidas rodadas: {analysis["matches"]}')
+    print(f'Numero de partidas executadas: {analysis["matches"]}')
 
     print(
         'Quantas partidas terminam por time out(1000 rodadas)? \n'
