@@ -41,57 +41,29 @@ desenvolver um jogo semelhante ao Banco Imobiliário, obedecendo os requisitos p
 # 3 - Dependências
 - Python 3.6+
 
-**Observação:** A aplicação foi desenvolvida utilizando somente as bibliotecas contidas no core do python,
-nenhuma biblioteca externa foi utilizada, por tanto, não foi criado um arquivo de depêndencias (requirement.txt)
-e não será necessário criar uma virtualenv.
+- flask
+- flask-restx
+- Flask-HTTPAuth
 
 <hr>
 
 # 4 - Executar
-Para executar a aplicação, clone esse diretório ou apenas baixe o diretório game e o arquivo principal:
-- **game** (Diretório contendo todo o código da aplicação e os testes unitários);
-- **main.py** (Arquivo principal responsável por executar a aplicação e imprimir no console respostas para as perguntas).
-    
-Após baixar os arquivos, execute o comando:
+Para subir a aplicação com API REST com sucesso, é recomendado que você crie uma virtualenv e instale as depêndencias 
+do arquivo requirements.txt antes de executar o arquivo api.py
 
-`python3 main.py`
+- `python3 -m venv venv`
+- `source venv/bin/activate`
+- `pip install -r requirements.txt`
+- `python api.py`
 
+Após executar a aplicação estará disponivel na porta 5000 **(localhost:5000)**
+
+Recomendo visitar a documentação para realizar o teste, para isso, acesse a url: **(localhost:5000/docs)**
 <hr>
 
-# 5- Resultado Esperado
-Após executar, será impresso no seu console as respostas para as perguntas apresentadas no tópico 2.
-
-Exemplo:
-
-![Resultado Esperado](doc_images/expected_result.png)
-
-**Observação:** O resultado que irá aparecer para você, não será exatamente igual ao resultado apresentado na imagem. 
-
-<hr>
-
-# 6 - Exemplo de uso
-Caso queira utilizar esta app como uma feature do seu projeto:
-
-- Baixe apenas o diretório **game**;
-- Importe o modulo **Controller**;
-    - `from game.controller import Controller`
-- Instâncie a classe **Controller()**;
-    - `gc = Controller()`
-- Execute as partidas com a função **run_matches()**, passe como parâmetro o numero de partidas que o programa deve executar;
-    - `gc.run_matches(300)`
-- Obtenha o resultado da analise das partidas;
-    - `analise = gc.analyze_matches()`
-- Uso o resultado da forma que preferir.
-  
-Caso preferir no diretório **game/examples** possui um arquivo de exemplo (**example.py**).
-
-![Exemplo](doc_images/example_result.png)
-
-<hr>
-
-# 7 - Docker
+# 5 - Docker
 Caso prefira testar a aplicação utilizando docker, rode o comando:
 
-`docker run --name lblackpythondx leohck/desafiobrasilprev:latest`
+`docker run --name lblackpythondxapi --publish 5000:5000 leohck/desafiobrasilprev:v1.1`
 
 Esse container esta hospedado no meu repositório do DockerHub (leohck)
