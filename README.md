@@ -1,3 +1,9 @@
+- [![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/downloads/release/python-3610/)
+- [![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)](https://www.python.org/downloads/release/python-3710/)
+- [![Python 3.7](https://img.shields.io/badge/python-3.8-green.svg)](https://www.python.org/downloads/release/python-3810/)
+- [![Python 3.7](https://img.shields.io/badge/python-3.9-green.svg)](https://www.python.org/downloads/release/python-394/)
+- [![Build Status](https://travis-ci.com/leohck/secretchallenge.svg?branch=master)](https://travis-ci.com/leohck/secretchallenge)
+
 # Desafio Secreto
 
 
@@ -32,7 +38,7 @@ desenvolver um jogo semelhante ao Banco Imobiliário, obedecendo os requisitos p
 <hr>
 
 # 3 - Dependências
-- Python 3.+
+- Python 3.6+
 
 **Observação:** A aplicação foi desenvolvida utilizando somente as bibliotecas contidas no core do python,
 nenhuma biblioteca externa foi utilizada, por tanto, não foi criado um arquivo de depêndencias (requirement.txt)
