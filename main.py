@@ -20,7 +20,7 @@ if __name__ == '__main__':
     """
     gc = Controller()
     gc.run_matches(300)
-    analysis = gc.analyze_data()
+    analysis = gc.analyze_matches()
     print(f'Numero de partidas executadas: {analysis["matches"]}')
 
     print(

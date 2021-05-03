@@ -14,7 +14,7 @@ class Controller:
             "winners": []
         }
 
-    def analyze_data(self):
+    def analyze_matches(self):
         """
         Faz a analise dos dados das partidas e retorna um dicionario contendo a analise.
         para utilizar este metodo é necessario que execute as partidas antes (self.run_matches)
@@ -64,4 +64,4 @@ class Controller:
             self.data['rounds'].append(analysis['rounds'])
             self.data['winners'].append(analysis['winner'])
         if analyze:
-            return self.analyze_data()
+            return self.analyze_matches()
