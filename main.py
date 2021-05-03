@@ -21,16 +21,16 @@ if __name__ == '__main__':
     gc = Controller()
     gc.run_matches(300)
     analysis = gc.analyze_matches()
-    print(f'Numero de partidas executadas: {analysis["matches"]}')
+    print(f'Numero de partidas executadas: {analysis["matches"]} \n')
 
     print(
         'Quantas partidas terminam por time out(1000 rodadas)? \n'
-        f'{analysis["timeout_matches"]}'
+        f'{analysis["timeout_matches"]} \n'
     )
 
     print(
         'Quantos turnos em média demora uma partida? \n'
-        f'{analysis["average_rounds_match"]}'
+        f'{analysis["average_rounds_match"]} \n'
     )
 
     print('Qual a porcentagem de vitórias por comportamento dos jogadores? ')
@@ -38,6 +38,6 @@ if __name__ == '__main__':
         print(f'{behavior["behavior"]}: {behavior["win_rate"]:.2f}%')
 
     print(
-        'Qual é o comportamento que mais vence? \n'
+        '\nQual é o comportamento que mais vence? \n'
         f'{analysis["most_winning_behavior"]}'
     )
