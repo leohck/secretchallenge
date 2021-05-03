@@ -33,7 +33,7 @@ class Controller:
         winners = dict(sorted(winners_counter.items(), key=lambda kv: kv[1], reverse=True))
         behaviors = []
         for behavior, won_matches in winners.items():
-            win_rate = (won_matches * 100) / matches
+            win_rate = round((won_matches * 100) / matches, 2)
             behaviors.append(
                 {
                     'behavior': behavior,

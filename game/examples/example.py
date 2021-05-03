@@ -27,10 +27,10 @@ print(analysis)
     'most_winning_behavior': 'impulsivo',
     'behaviors':
      [
-        {'behavior': 'impulsivo', 'won_matches': 93, 'win_rate': 31.0},
-        {'behavior': 'cauteloso', 'won_matches': 74, 'win_rate': 24.666666666666668},
-        {'behavior': 'aleatorio', 'won_matches': 71, 'win_rate': 23.666666666666668},
-        {'behavior': 'exigente', 'won_matches': 62, 'win_rate': 20.666666666666668}
+        {'behavior': 'impulsivo', 'won_matches': 96, 'win_rate': 32.0},
+        {'behavior': 'cauteloso', 'won_matches': 73, 'win_rate': 24.33},
+        {'behavior': 'aleatorio', 'won_matches': 66, 'win_rate': 22.0},
+        {'behavior': 'exigente', 'won_matches': 65, 'win_rate': 21.67}
     ]
 }
 """
