@@ -115,7 +115,6 @@ class Match:
         if next_position > self.MAX_ESTATES:
             player.position = next_position - self.MAX_ESTATES
             self.__benefit_player(player)
-            # print(f'COMPLETOU A VOLTA NO TABULEIRO E RECEBEU R$ {self.BENEFIT_AMOUNT}')
         else:
             player.position = next_position
 
@@ -138,7 +137,6 @@ class Match:
             for estate in player.estates:
                 estate.change_owner(None)
             players.pop(player.id_)
-            # print(f'JOGADOR ({player}) PERDEU!')
         return players
 
     @staticmethod
@@ -168,45 +166,32 @@ class Match:
     def run(self):
         winner = None
         players = self.__get_random_players_sequence()
-        # print("====== INICIO DO JOGO ======")
         while self.__round < self.MAX_ROUNDS:
-            # print("====== RODADA: %i =======" % self.round)
             for player in players.values():
                 #  1 - INICIAR JOGADA
-                # print(f'--------- JOGADOR ({player}) ----------')
 
                 #  JOGAR DADO
-                # print('Jogou o dado...')
                 rolled_dice = self.roll_dice()
-                # print(f'Andou {rolled_dice} casas')
 
                 #  2 - ANDAR NO TABULEIRO
                 self.__change_player_position(player, rolled_dice)
-                # print(f'Posição Atual: {player.position}')
 
                 #  3 - VER PROPRIEDADE EM QUE PAROU
                 estate = self.estates[player.position]
-                # print(f'Parou na Propriedade ({estate})')
 
                 #  4 - COMPRAR OU PAGAR ALUGUEL DA PROPRIEDADE
                 #  4.1 - COMPRAR PROPRIEDADE
                 if not estate.owner:
                     if player.can_buy_estate(estate):
                         player.buy_estate(estate)
-                        # print(f'Comprou a Propriedade no valor de R$ {estate.sale_price}')
                     else:
                         pass
-                        # print('Não comprou a Propriedade')
                 #  4.2 - PAGAR ALUGUEL
                 elif estate.owner != player:
                     player.pay_rent(estate)
                     estate.owner.receive_rent_payment(estate)
-                    # print(f'Pagou o aluguel da Propriedade no valor de R$ {estate.rent_price} '
-                    #       f'Para o Jogador: ({estate.owner.id_})')
 
                 #  5 - FIM DA JOGADA
-                # print(f'JOGADOR ({player})')
-                # print('---------------------------------' * 2)
 
             #  REMOVE OS JOGADORES QUE NÃO ESTÃO APTOS A CONTINUAR JOGANDO
             players = self.__remove_losing_players(players)
@@ -219,16 +204,12 @@ class Match:
                 k = list(players)
                 winner = players[k[0]]
 
-            # print("====== FIM RODADA ======")
-
             if winner:
                 break
 
             self.__round += 1
 
-        # print("====== FIM DO JOGO ======")
         winner = self.__get_winner_player(players) if winner is None else winner
-        # print(f'JOGADOR: {winner} GANHOU!')
         self.__analytics["rounds"] = self.__round
         self.__analytics["winner"] = winner.behavior[1]
 
