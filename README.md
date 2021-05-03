@@ -88,3 +88,10 @@ Caso preferir no diretório **game/examples** possui um arquivo de exemplo (**ex
 ![Exemplo](doc_images/example_result.png)
 
 <hr>
+
+# 7 - Docker
+Caso prefira testar a aplicação utilizando docker, rode o comando:
+
+`docker run --name lblackpythondx leohck/desafiobrasilprev:latest`
+
+Esse container esta hospedado no meu repositório do DockerHub (leohck)
