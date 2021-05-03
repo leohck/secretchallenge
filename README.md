@@ -1,8 +1,9 @@
-- [![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/downloads/release/python-3610/)
-- [![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)](https://www.python.org/downloads/release/python-3710/)
-- [![Python 3.7](https://img.shields.io/badge/python-3.8-green.svg)](https://www.python.org/downloads/release/python-3810/)
-- [![Python 3.7](https://img.shields.io/badge/python-3.9-green.svg)](https://www.python.org/downloads/release/python-394/)
-- [![Build Status](https://travis-ci.com/leohck/secretchallenge.svg?branch=master)](https://travis-ci.com/leohck/secretchallenge)
+[![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/downloads/release/python-3610/)
+[![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)](https://www.python.org/downloads/release/python-3710/)
+[![Python 3.7](https://img.shields.io/badge/python-3.8-green.svg)](https://www.python.org/downloads/release/python-3810/)
+[![Python 3.7](https://img.shields.io/badge/python-3.9-green.svg)](https://www.python.org/downloads/release/python-394/)
+
+[![Build Status](https://travis-ci.com/leohck/secretchallenge.svg?branch=master)](https://travis-ci.com/leohck/secretchallenge)
 
 # Desafio Secreto
 
