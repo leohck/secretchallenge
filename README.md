@@ -32,7 +32,7 @@ desenvolver um jogo semelhante ao Banco Imobiliário, obedecendo os requisitos p
 <hr>
 
 # 3 - Dependências
-- Python 3.+
+- Python 3.6+
 
 **Observação:** A aplicação foi desenvolvida utilizando somente as bibliotecas contidas no core do python,
 nenhuma biblioteca externa foi utilizada, por tanto, não foi criado um arquivo de depêndencias (requirement.txt)
