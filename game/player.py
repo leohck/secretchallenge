@@ -1,5 +1,5 @@
-from game.estate import Estate
 from random import choice
+from game.estate import Estate
 
 
 #  CONSTANTE QUE ARMAZENA OS TIPOS DE COMPORTAMENTO
