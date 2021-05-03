@@ -7,4 +7,4 @@ python:
   - "3.8"
   - "3.9"
 script:
-  - "game/tests/test_game.py"
+  - "/game/tests/test_game.py"
