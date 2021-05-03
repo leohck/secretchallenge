@@ -45,20 +45,20 @@ Para executar a aplicação, clone esse diretório ou apenas baixe o diretório 
 - **game** (Diretório contendo todo o código da aplicação e os testes unitários);
 - **main.py** (Arquivo principal responsável por executar a aplicação e imprimir no console respostas para as perguntas).
     
-Após baixar os arquivos, para rodar o programa execute o comando:
+Após baixar os arquivos, execute o comando:
 
 `python3 main.py`
 
 <hr>
 
 # 5- Resultado Esperado
-Após executar, será impresso no seu console as respostas para as perguntas do apresentadas no tópico 2.
+Após executar, será impresso no seu console as respostas para as perguntas apresentadas no tópico 2.
 
 Exemplo:
 
 ![Resultado Esperado](doc_images/expected_result.png)
 
-**Observação:** O resultado que irá aparecer para você, não será exatamente igual ao resultado apresentado no tópico 5. 
+**Observação:** O resultado que irá aparecer para você, não será exatamente igual ao resultado apresentado na imagem. 
 
 <hr>
 
@@ -76,7 +76,7 @@ Caso queira utilizar esta app como uma feature do seu projeto:
     - `analise = gc.analyze_matches()`
 - Uso o resultado da forma que preferir.
   
-Caso preferir no diretório game/examples possui um código de exemplo.
+Caso preferir no diretório **game/examples** possui um arquivo de exemplo (**example.py**).
 
 ![Exemplo](doc_images/example_result.png)
 
